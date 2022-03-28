@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+}
+.navbar{
+  background-color: #c72b10 !important; 
+
+}
+.navbar-nav{
+  display:flex;
+  margin-left:800px;
+}
+
+
+/*Cards*/
+.bi-trash3{
+  cursor:pointer;
+ 
+}
+.card{
+  max-height: 550px;
+  overflow: hidden;
+}
+.card:hover{
+  max-height:860px;
+}
+
+@media screen and (max-width: 1200px){
+  .navbar-nav{
+  display:flex;
+  margin-left:0px;
+}
+}
