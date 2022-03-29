@@ -3,17 +3,14 @@ import CardsHome from './CardsHome'
 import getApi from '../../Api/getApi'
 
 
-
-
 const HomeContainer = () => {
-  const [movies, setMovies] = useState([])
+  const [movies, setMovies] = useState([])  
 
-  const getMovies = () => {
-    getApi({ setMovies})
-  }
+  // const getMovies = () => {
+  //   getApi({ setMovies, id})}
 
   useEffect(() => {
-    getMovies()
+    getApi(setMovies)
   },[])
 
   
@@ -21,9 +18,9 @@ const HomeContainer = () => {
   console.log(movies)
 
   return (
-      <div className='container m-auto mb-5 d-flex justify-content-center align-items-center row'>
-          
-      {movies.map(movie => (
+      <div className='container m-auto mb-5 d-flex justify-content-center align-items-center row'>      
+      {  
+        movies.map(movie => (
        
         <CardsHome
           key={movie.id}
@@ -35,11 +32,10 @@ const HomeContainer = () => {
           date={movie.release_date}
          
         />
-        
-        
-        
-     ))}
-     
+        ))       
+         
+     }
+    
 
 
     </div>

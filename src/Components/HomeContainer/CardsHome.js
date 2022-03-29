@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useMoviesContext } from '../../Context/MoviesContextProvider'
 
 
 
-const CardsHome = ({ id, title, resumen, movie, img, date }) => {
+const CardsHome = ({ id, title, movie, img }) => {
    
     const { addMovie } = useMoviesContext()
     
@@ -17,11 +18,9 @@ const CardsHome = ({ id, title, resumen, movie, img, date }) => {
                 <i className="bi bi-heart"></i>
             </button>
             <div className="card-body">
-                <h5 className="card-title">{title} </h5>
-                <p className="card-text">{resumen} </p>
-                <p className="card-date">{date} </p>               
-            </div>
-          
+                <h5 className="card-title p-3">{title} </h5>
+            <Link className="btn btn-danger card-date"  to={`/${id}`}>Ver mas.. </Link>               
+            </div>          
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useMoviesContext } from '../../Context/MoviesContextProvider'
 
-const NavBar = ({ to, title, icono, navLink }) => {
+const NavBar = ({ to, title, icono, navLink, tv }) => {
     const {moviesList} = useMoviesContext()
 
 
@@ -12,6 +12,7 @@ const NavBar = ({ to, title, icono, navLink }) => {
             <nav className="navbar navbar-expand-lg navbar-light bg-danger">
                 <div className="container">
                     <span className="navbar-brand " to={to}> {title} </span>
+                    <span className="navbar-brand "> {tv} </span>
                     <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

@@ -5,7 +5,12 @@ import NavBar from '../Components/Navbar/NavBar'
 const Home = () => {
   return (
     <>
-      <NavBar to='/favoritos' title='Encuentra tu Película' icono='favorite' navLink='Favoritos' />
+      <NavBar to='/favoritos'
+        title='Encuentra tu Película'
+        icono='favorite'
+        navLink='Favoritos'
+        tv='TV'
+      />
     <main id='main-home'>
       <section id='contenedor-home'>
         <HomeContainer/>
