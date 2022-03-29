@@ -7,8 +7,7 @@ import { useMoviesContext } from '../../Context/MoviesContextProvider'
 const CardsHome = ({ id, title, movie, img }) => {
    
     const { addMovie } = useMoviesContext()
-    
-  
+   
 
 
     return (
@@ -19,7 +18,7 @@ const CardsHome = ({ id, title, movie, img }) => {
             </button>
             <div className="card-body">
                 <h5 className="card-title p-3">{title} </h5>
-            <Link className="btn btn-danger card-date"  to={`/${id}`}>Ver mas.. </Link>               
+                <Link className="btn btn-danger card-date" to={`/${id}`} >Ver mas.. </Link>               
             </div>          
         </div>
     )

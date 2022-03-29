@@ -40,7 +40,6 @@ const MoviesContextProvider = ({ children }) => {
     
     useEffect(() => {
         localStorage.setItem('localMovies', JSON.stringify(moviesList))
-
     }, [moviesList])
 
     const deleteAllFavoritos = () => {

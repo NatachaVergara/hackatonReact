@@ -5,7 +5,7 @@ const getApi = (setMovies, id) => {
 
     let url = `https://api.themoviedb.org/3/movie/popular?api_key=4686eb3ce1823957b16c599e25b0189e`;
 
-
+   
 
     if (id) {
         axios.get(urlId)
