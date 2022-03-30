@@ -4,7 +4,7 @@ import { useMoviesContext } from '../../Context/MoviesContextProvider'
 import Icons from '../Icons'
 
 const NavBar = ({ to, title, navLink, tv }) => {
-    const {moviesList} = useMoviesContext()
+    const { moviesList } = useMoviesContext()
 
 
 
@@ -20,15 +20,20 @@ const NavBar = ({ to, title, navLink, tv }) => {
                     <div className="collapse navbar-collapse " id="navbarNav">
                         <ul className="navbar-nav ms-xs-0">
                             <li className="nav-item ">
-                             {   navLink === 'Favoritos' ?
-                                    <NavLink className="navbar-brand text-warning" to={to} >
-                                        <span> {moviesList.length} </span>
-                                        <Icons iName='bi bi-heart '/>
-                                   
+                                {navLink === 'Favoritos' ?
+                                    <NavLink className="navbar-brand" to={to} >
+                                        {moviesList.length === 0 ?
+                                            <>  <span className='text-dark'> {moviesList.length} </span>
+                                                <Icons iName='bi bi-heart text-dark' />
+                                            </> :
+                                            <>
+                                                <span className='text-warning'> {moviesList.length} </span>
+                                                <Icons iName='bi bi-heart text-warning' />
+                                            </>}
                                     </NavLink>
                                     :
                                     <NavLink className="navbar-brand text-success" to={to} >
-                                        <Icons iName='bi bi-house-door-fill' />                                       
+                                        <Icons iName='bi bi-house-door-fill' />
                                     </NavLink>
                                 }
                             </li>
