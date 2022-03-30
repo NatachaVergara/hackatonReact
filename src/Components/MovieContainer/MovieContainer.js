@@ -21,10 +21,6 @@ const MovieContainer = () => {
   const [movie, setMovie] = useState(getLocalMovie())
 
   const { id } = useParams()
-  console.log(`Pelicula id: ${id}`)
-  console.log(`Pelicula resultado: ${movie}`)
-  console.log(`PeliculaLS resultado: ${localStorage.getItem('localMovie')}`)
-
   localStorage.setItem('localMovie', JSON.stringify(movie))
 
 
