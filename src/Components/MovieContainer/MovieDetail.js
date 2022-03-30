@@ -13,7 +13,7 @@ const MovieDetail = ({ movie }) => {
               <p>Tagline: {movie.tagline}</p>
               <p className="card-date">Release date: {movie.release_date}</p>
               <a href={movie.homepage} target="_blank" rel="noopener noreferrer"className="btn btn-outline-warning m-2">Visit homepage</a>
-              <div className='d-flex flex-column m-2'>
+              {/* <div className='d-flex flex-column m-2'>
                   <div className='d-flex flex-column'>
                       <h5 >Gender</h5>    
                   <ul className="list-group list-unstyled">
@@ -33,7 +33,7 @@ const MovieDetail = ({ movie }) => {
                           </li>
                   </ul>
                   ))} </div>
-              </div>
+              </div> */}
               <Link to='/' className='btn btn-success '>Volver a inicio</Link>
               <BtnAddCntx movie={movie}  />
           </div>
