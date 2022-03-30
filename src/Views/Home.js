@@ -7,7 +7,6 @@ const Home = () => {
     <>
       <NavBar to='/favoritos'
         title='Encuentra tu Película'
-        icono='favorite'
         navLink='Favoritos'
         tv='TV'
       />

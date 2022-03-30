@@ -1,8 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useMoviesContext } from '../../Context/MoviesContextProvider'
+import Icons from '../Icons'
 
-const NavBar = ({ to, title, icono, navLink, tv }) => {
+const NavBar = ({ to, title, navLink, tv }) => {
     const {moviesList} = useMoviesContext()
 
 
@@ -22,11 +23,12 @@ const NavBar = ({ to, title, icono, navLink, tv }) => {
                              {   navLink === 'Favoritos' ?
                                 <NavLink className="navbar-brand" to={to} >
                                         <span> {moviesList.length} </span>
-                                    <i className="bi bi-heart"></i>
+                                        <Icons iName='bi bi-heart'/>
+                                   
                                     </NavLink>
                                     :
                                     <NavLink className="navbar-brand" to={to} >
-                                        <i className="bi bi-house-door-fill"></i>
+                                        <Icons iName='bi bi-house-door-fill' />                                       
                                     </NavLink>
                                 }
                             </li>
