@@ -21,13 +21,13 @@ const NavBar = ({ to, title, navLink, tv }) => {
                         <ul className="navbar-nav ms-xs-0">
                             <li className="nav-item ">
                              {   navLink === 'Favoritos' ?
-                                <NavLink className="navbar-brand" to={to} >
+                                    <NavLink className="navbar-brand text-warning" to={to} >
                                         <span> {moviesList.length} </span>
-                                        <Icons iName='bi bi-heart'/>
+                                        <Icons iName='bi bi-heart '/>
                                    
                                     </NavLink>
                                     :
-                                    <NavLink className="navbar-brand" to={to} >
+                                    <NavLink className="navbar-brand text-success" to={to} >
                                         <Icons iName='bi bi-house-door-fill' />                                       
                                     </NavLink>
                                 }
